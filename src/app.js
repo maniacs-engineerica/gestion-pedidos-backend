@@ -3,6 +3,7 @@ import cors from 'cors'
 import { getPurchasesRouter } from './routers/purchasesRouter.js'
 import { getProductsRouter } from './routers/productsRouter.js'
 import { getUsersRouter } from './routers/usersRouter.js'
+import { getAnalyticsRouter } from './routers/analyticsRouter.js'
 
 
 class App {
@@ -14,6 +15,7 @@ class App {
         app.use('/api/purchases', getPurchasesRouter())
         app.use('/api/products', getProductsRouter())
         app.use('/api/users', getUsersRouter())
+        app.use('/api/analytics', getAnalyticsRouter())
 
         // app.options('*', cors()); 
         // app.use(function (req, res, next) {

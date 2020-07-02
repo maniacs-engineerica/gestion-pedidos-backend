@@ -14,17 +14,6 @@ function getUsersRouter() {
         res.status(200).json(user)
     })
 
-    // router.put('/:id', async (req, res) => {
-    // })
-
-    
-    // router.get('/', async (req, res) => {
-    //     res.json(products)
-    // })
-
-    // router.delete('/:id', async (req, res) => {
-    // })
-
     return router
 }
 

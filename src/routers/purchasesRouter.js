@@ -62,9 +62,6 @@ function getPurchasesRouter() {
         res.status(200).json(purchase)
     })
 
-    router.delete('/:id', async (req, res) => {
-    })
-
     return router
 }
 
