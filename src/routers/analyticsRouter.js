@@ -1,5 +1,6 @@
 import express from 'express'
 import purchases from '../data/purchases.js';
+import products from '../data/products.js';
 
 
 function getAnalyticsRouter() {
@@ -82,6 +83,24 @@ function getAnalyticsRouter() {
           const response = clients
             .sort((a, b) => b.amount - a.amount)
             .slice(0, limit);
+        res.status(200).json(response)
+    })
+
+    router.get('/productsranking', async (req, res) => {
+        const productsCopy = [...products];
+        productsCopy.forEach(product => {
+            const items = purchases.reduce(
+                (prev, current) => prev.concat(current.items),
+                []
+            ).filter(i => i.product.id == product.id && i.rating > 0);
+    
+            if (items.length > 0){
+                product.rating = items.reduce((a, b) => a + b.rating, 0) / items.length
+            } else {
+                product.rating = 0
+            }
+        })
+        const response = productsCopy.sort((a, b) => b.rating - a.rating)
         res.status(200).json(response)
     })
 

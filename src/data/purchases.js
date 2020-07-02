@@ -15,9 +15,9 @@ export default [
           id: 2,
           slug: 'chocotorta',
           name: "Torta de Chocolinas",
-          price: 30,
-          rating: 0
-        }
+          price: 30
+        },
+        rating: 0
       },
       {
         id: 1,
@@ -27,8 +27,8 @@ export default [
           slug: 'pan-dulce',
           name: "Pan dulce",
           price: 15,
-          rating: 0
-        }
+        },
+        rating: 0
       }
     ]
   },
@@ -48,9 +48,9 @@ export default [
           id: 4,
           slug: 'pan-dulce',
           name: "Pan dulce",
-          price: 15,
-          rating: 0
-        }
+          price: 15
+        },
+        rating: 0
       }
     ]
   },
@@ -71,8 +71,8 @@ export default [
           slug: 'chocotorta',
           name: "Torta de Chocolinas",
           price: 30,
-          rating: 0
-        }
+        },
+        rating: 0
       }
     ]
   },
@@ -93,8 +93,8 @@ export default [
           slug: 'volcan-chocolate',
           name: "Volcán de chocolate",
           price: 40,
-          rating: 0
-        }
+        },
+        rating: 0
       },
       {
         id: 1,
@@ -104,8 +104,8 @@ export default [
           slug: 'churros',
           name: "Churros con dulce de leche",
           price: 25,
-          rating: 0
-        }
+        },
+        rating: 0
       }
     ]
   },
@@ -126,8 +126,8 @@ export default [
           slug: 'chocotorta',
           name: "Torta de Chocolinas",
           price: 30,
-          rating: 0
-        }
+        },
+        rating: 0
       },
       {
         id: 1,
@@ -137,8 +137,8 @@ export default [
           slug: 'pan-dulce',
           name: "Pan dulce",
           price: 15,
-          rating: 0
-        }
+        },
+        rating: 0
       }
     ]
   },
@@ -158,9 +158,9 @@ export default [
           id: 2,
           slug: 'chocotorta',
           name: "Torta de Chocolinas",
-          price: 30,
-          rating: 0
-        }
+          price: 30
+        },
+        rating: 5
       },
       {
         id: 1,
@@ -169,9 +169,9 @@ export default [
           id: 4,
           slug: 'pan-dulce',
           name: "Pan dulce",
-          price: 15,
-          rating: 0
-        }
+          price: 15
+        },
+        rating: 0
       }
     ]
   }

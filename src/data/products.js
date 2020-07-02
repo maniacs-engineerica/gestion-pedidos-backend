@@ -6,7 +6,6 @@ export default [
         description: 'Masa sablé dulce, con crema de limón y merengue italiano.',
         price: 600,
         image: 'https://66.media.tumblr.com/b088b81078c168857d83527969147169/tumblr_nhlfjhDKgJ1sn5m44o1_500.jpg',
-        rating: 3,
         category: 'Dessert',
         location: 2
     },
@@ -17,7 +16,6 @@ export default [
         description: 'Torta de chocolinas con dulce de leche y queso crema.',
         price: 405,
         image: 'https://i.pinimg.com/564x/0c/3e/a7/0c3ea73335cae2d23e0cccf7317ec4c9.jpg',
-        rating: 3,
         category: 'Cake',
         location: 1
     },
@@ -28,7 +26,6 @@ export default [
         description: 'Cheesecake con base crocante, crema de limon y frutos rojos.',
         price: 250,
         image: 'https://images.pexels.com/photos/4040693/pexels-photo-4040693.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-        rating: 5,
         category: 'Cake',
         location: 2        
     },
@@ -39,7 +36,6 @@ export default [
         description: 'Soy un pan dulce.',
         price: 340,
         image: 'https://i.pinimg.com/564x/b1/ab/99/b1ab99774f44b1e4738cb83a18a920d6.jpg',
-        rating: 3,
         category: 'Dessert',
         location: 4
     },
@@ -50,7 +46,6 @@ export default [
         description: 'Soy un brownie.',
         price: 150,
         image: 'https://images.pexels.com/photos/2067396/pexels-photo-2067396.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-        rating: 4,
         category: 'Baked-goods',
         location: 3
     },
@@ -61,7 +56,6 @@ export default [
         description: 'Coulant de chocolate.',
         price: 240,
         image: 'https://images.pexels.com/photos/3998950/pexels-photo-3998950.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-        rating: 3,
         category: 'Dessert',
         location: 2        
     },
@@ -72,7 +66,6 @@ export default [
         description: 'Churros con dulce de leche.',
         price: 150,
         image: 'https://images.pexels.com/photos/372886/pexels-photo-372886.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-        rating: 3,
         category: 'Baked-goods',
         location: 1
     },
@@ -83,7 +76,6 @@ export default [
         description: 'Torta marquesa de vainilla.',
         price: 140,
         image: 'https://images.pexels.com/photos/3223494/pexels-photo-3223494.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-        rating: 3,
         category: 'Cake',
         location: 2
     },
@@ -94,7 +86,6 @@ export default [
         description: 'Panqueques de banana y frutos rojos.',
         price: 110,
         image: 'https://images.pexels.com/photos/213780/pexels-photo-213780.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-        rating: 3,
         category: 'Dessert',
         location: 3
     },
@@ -105,7 +96,6 @@ export default [
         description: 'Torta de mousse de chocolate y frutillas.',
         price: 150,
         image: 'https://images.pexels.com/photos/4110003/pexels-photo-4110003.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-        rating: 4,
         category: 'Cake',
         location: 2
     },
