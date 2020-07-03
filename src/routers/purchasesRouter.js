@@ -17,9 +17,24 @@ function getPurchasesRouter() {
             res.status(400).json(new Error("Usuario invalido"))
             return
         }
-        const response = user.isAdmin
-            ? purchases.filter(p => p.status != 3)
-            : purchases.filter(p => p.client.id == user.id);
+        let response = [...purchases]
+        const status = queryParams.get("status")
+        if (status && status >= 0){
+            response = response.filter(p => p.status == status)
+        }
+
+        let client = queryParams.get("client")
+        if (client && client.trim().length > 0){
+            client = client.trim().toLowerCase()
+            response = response.filter(p => p.client.name.toLowerCase().includes(client))
+        }
+
+        response = user.isAdmin
+            ? response.filter(p => p.status != 3)
+            : response.filter(p => p.client.id == user.id && p.status != 3);
+
+        response = response.sort((a, b) => new Date(b.date) - new Date(a.date))
+
         res.status(200).json(response)
     })
 
@@ -59,6 +74,10 @@ function getPurchasesRouter() {
             return
         }
         const purchase = PurchaseHelper.getOrCreate(user, req.params.id)
+        if (!purchase) {
+            res.status(400).json(new Error("No existe el pedido"))
+            return
+        }
         res.status(200).json(purchase)
     })
 

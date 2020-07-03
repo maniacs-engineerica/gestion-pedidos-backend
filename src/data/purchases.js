@@ -38,7 +38,7 @@ export default [
       id: 1,
       name: "Constanza Cirion"
     },
-    date: "2020-02-15T13:00:00.000Z",
+    date: "2019-02-15T13:00:00.000Z",
     status: 1,
     items: [
       {

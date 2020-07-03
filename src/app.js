@@ -6,11 +6,23 @@ import { getUsersRouter } from './routers/usersRouter.js'
 import { getAnalyticsRouter } from './routers/analyticsRouter.js'
 
 
+function sleep(ms) {
+    return new Promise((resolve) => {
+      setTimeout(resolve, ms);
+    });
+  }   
+
 class App {
     constructor() {
         const app = express()
         app.use(express.json())
         app.use(cors()); 
+
+        app.use(async (req, res, next) => {
+            const delay = Math.floor((Math.random() * 1000))
+            await sleep(delay)
+            next()
+        });
         
         app.use('/api/purchases', getPurchasesRouter())
         app.use('/api/products', getProductsRouter())
