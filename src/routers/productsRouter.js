@@ -6,7 +6,21 @@ function getProductsRouter() {
     const router = express.Router()
     
     router.get('/', async (req, res) => {
-        res.json(products)
+        const productsCopy = [...products]
+
+        const items = purchases.reduce(
+            (prev, current) => prev.concat(current.items),
+            []
+        )
+        
+        productsCopy.forEach(product => {
+            const productItems = items.filter(i => i.product.id == product.id && i.rating > 0);
+            if (productItems.length > 0){
+                product.rating = productItems.reduce((a, b) => a + b.rating, 0) / productItems.length
+            }
+        })
+
+        res.json(productsCopy)
     })
 
     router.get('/:slug', async (req, res) => {
