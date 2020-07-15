@@ -1,10 +1,11 @@
 import express from 'express'
 import users from '../data/users.js';
+import sleep from '../helpers/Sleep.js';
 
 function getUsersRouter() {
     const router = express.Router()
 
-    router.post('/login', async (req, res) => {
+    router.post('/login', sleep, async (req, res) => {
         const credentials = req.body
         const user = users.find(u => u.email === credentials.email && u.password === credentials.password);        
         if (!user){

@@ -2,11 +2,12 @@ import express from 'express'
 import users from '../data/users.js'
 import purchases from '../data/purchases.js'
 import PurchaseHelper from '../helpers/PurchaseHelper.js'
+import sleep from '../helpers/Sleep.js'
 
 function getPurchasesRouter() {
     const router = express.Router()
 
-    router.get('/', async (req, res) => {
+    router.get('/', sleep, async (req, res) => {
         const queryParams = new Map(Object.entries(req.query))
         if (!queryParams.has("user")) {
             res.status(400).json(new Error("Falta parametro user"))
@@ -52,7 +53,7 @@ function getPurchasesRouter() {
         purchases.splice(index, 1, purchase)
     })
 
-    router.get('/current', async (req, res) => {
+    router.get('/current', sleep, async (req, res) => {
         const queryParams = new Map(Object.entries(req.query))
         let user = null
         if (queryParams.has("user")) {
@@ -62,7 +63,7 @@ function getPurchasesRouter() {
         res.status(200).json(purchase)
     })
 
-    router.get('/:id', async (req, res) => {
+    router.get('/:id', sleep, async (req, res) => {
         const queryParams = new Map(Object.entries(req.query))
         if (!queryParams.has("user")) {
             res.status(400).json(new Error("Falta parametro user"))
