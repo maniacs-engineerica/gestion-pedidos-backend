@@ -15,6 +15,11 @@ function getUsersRouter() {
         res.status(200).json(user)
     })
 
+    router.get('/clients', sleep, async (req, res) => {
+        const clients = users.filter(u => !u.isAdmin)
+        res.status(200).json(clients)
+    })
+
     return router
 }
 
