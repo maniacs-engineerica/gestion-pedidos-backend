@@ -87,7 +87,7 @@ function getAnalyticsRouter() {
     })
 
     router.get('/productsranking', async (req, res) => {
-        const productsCopy = [...products];
+        const productsCopy = products.filter(p => !p.deleted);
         productsCopy.forEach(product => {
             const items = purchases.reduce(
                 (prev, current) => prev.concat(current.items),
