@@ -51,6 +51,7 @@ function getPurchasesRouter() {
             return
         }
         purchases.splice(index, 1, purchase)
+        res.status(200).json()
     })
 
     router.get('/current', sleep, async (req, res) => {

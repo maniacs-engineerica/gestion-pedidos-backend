@@ -4,14 +4,16 @@ export default [
     id: 2,
     email: "matienz@gmail.com",
     password: "matias",
-    isAdmin: false
+    isAdmin: false,
+    phone: "11-4444-5555"
   },
   {
     name: "Ivan Blanco",
     id: 0,
     email: "ivan.blanco.ch@gmail.com",
     password: "ivan",
-    isAdmin: false
+    isAdmin: false,
+    phone: "11-3333-7777"
   },
   {
     name: "Constanza Cirion",
